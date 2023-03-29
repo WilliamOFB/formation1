@@ -56,7 +56,7 @@ sd(onde$CoordXSiteHydro) # écart-type
 plot(onde$CoordXSiteHydro) # graphique simple
 hist(onde$CoordXSiteHydro) # distribution (var, quantile) en histogramme
 ggplot(data = onde, # autre type distribution plus propre
-       aes(x = CoordXSiteHydro)) + 
+       aes(x = CoordXSiteHydro)) +
   geom_histogram(fill = "pink",  # fill pour choisir la couleur des barres
                  col = "darkgrey") + # col pour choisir la couleur contours
   labs(x = "Longitude", # nom abscisse
@@ -66,9 +66,9 @@ ggplot(data = onde, # autre type distribution plus propre
 table(onde$LbRegion) # nb occurrence chaque nom de région
 
 ggplot(data = onde, # distribution en diagramme baton
-       aes(x = LbRegion)) + 
-  geom_bar(fill="pink", 
-           col = "darkgrey") + 
+       aes(x = LbRegion)) +
+  geom_bar(fill="pink",
+           col = "darkgrey") +
   labs(x = "Région",
        y = "Nombre d'occurrences",
        title = "Mon diagramme") +
@@ -139,3 +139,5 @@ mapview::mapview(her1,
                  alpha.regions = 0.4,
                  zcol = "gid")+
   mapview::mapview(her2)
+
+# modif de test
